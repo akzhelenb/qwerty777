@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Air Asia</title>
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+</head>
+<body>
+  <div class="wrapper">
+
+<button id="menu-toggle" class="menu-toggle">☰ Меню</button>
+
+    <!-- ===== HEADER ===== -->
+     <div id="fullscreen-menu" class="fullscreen-menu">
+  <button id="menu-close" class="menu-close">✖</button>
+  <nav class="menu-nav">
+    <a href="#about">О нас</a>
+    <a href="#tours">Туры</a>
+    <a href="#contacts">Контакты</a>
+  </nav>
+</div>
+
+    <header class="header">
+      <div class="container header__container">
+        <div class="logo">AirAsia</div>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li><a class="nav__link" href="#tours">Туры</a></li>
+            <li class="dropdown">
+              <a class="nav__link" href="#">О нас ▼</a>
+              <ul class="submenu">
+                <li><a href="#about">Компания</a></li>
+                <li><a href="#tours">Наши туры</a></li>
+                <li><a href="reviews.html">Отзывы</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__phone">
+          <a href="tel:+78007003030">8 800 700 30 30</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="hero">
+      <div class="hero__content">
+        <h1 class="hero__title">Авторские туры по Азии</h1>
+        <p class="hero__subtitle">Путешествуй ярко и незабываемо</p>
+        <a class="btn" href="#tours">Смотреть туры</a>
+      </div>
+    </section>
+
+    <!-- ===== ГОРЯЩИЕ ТУРЫ ===== -->
+    <section class="tours" id="tours">
+      <div class="container">
+        <h2 class="section-title">Горящие туры 🔥</h2>
+        <div class="tours__list">
+          <div class="tour-card">
+            <img alt="Таиланд" src="img/thailand.jpg" />
+            <div class="tour-card__content">
+              <h3 class="tour-card__title">Таиланд</h3>
+              <p class="tour-card__info">10 дней / от 500$</p>
+              <a class="btn tour-card__btn" href="#">Смотреть</a>
+            </div>
+          </div>
+          <div class="tour-card">
+            <img alt="Бали" src="img/bali.jpg" />
+            <div class="tour-card__content">
+              <h3 class="tour-card__title">Бали</h3>
+              <p class="tour-card__info">12 дней / от 650$</p>
+              <a class="btn tour-card__btn" href="#">Смотреть</a>
+            </div>
+          </div>
+          <div class="tour-card">
+            <img alt="Индонезия" src="img/indonesia.jpg" />
+            <div class="tour-card__content">
+              <h3 class="tour-card__title">Индонезия</h3>
+              <p class="tour-card__info">7 дней / от 400$</p>
+              <a class="btn tour-card__btn" href="#">Смотреть</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== О НАС ===== -->
+    <section class="about" id="about">
+      <div class="container about__container">
+        <div class="about__text">
+          <h2 class="section-title">О нас</h2>
+          <p>Мы организуем туры по Азии с вниманием к деталям. Это не стандартные путёвки, а авторские путешествия с душой.</p>
+          <p>Наша цель — показать тебе настоящую Азию: традиции, природу и места, о которых знают только местные.</p>
+          <a class="btn" href="#tours">Подробнее</a>
+        </div>
+        <div class="about__image">
+          <img alt="О нас" src="img/about.jpg" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ВИДЕО ТУРА ===== -->
+    <section id="tour-video" style="text-align:center; padding: 50px 0;">
+      <h2>Видео тура</h2>
+      <button id="openVideoBtn" style="padding: 10px 20px; font-size: 16px; cursor: pointer;">
+        Смотреть видео тура
+      </button>
+      <div id="videoModal" style="display:none; position:fixed; z-index:1000; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,0.8);">
+        <div style="position:relative; width:80%; max-width:800px; margin:100px auto;">
+          <iframe allowfullscreen frameborder="0" height="450" id="tourVideoFrame" src="" width="100%"></iframe>
+          <button id="closeVideoBtn" style="position:absolute; top:-40px; right:0; background:#fff; border:none; padding:10px 15px; cursor:pointer;">Закрыть</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== КАРТА ===== -->
+    <section id="tour-map" style="text-align:center; padding:50px 0;">
+      <h2>Место проведения тура</h2>
+      <div style="width:100%; max-width:800px; height:400px; margin:auto;">
+        <iframe
+          allowfullscreen
+          height="400"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=Japan&amp;output=embed"
+          style="border:0;"
+          width="100%">
+        </iframe>
+      </div>
+    </section>
+
+    <!-- ===== ФОРМА БРОНИРОВАНИЯ ===== -->
+    <section id="booking" style="text-align:center; padding:50px 0;">
+      <h2>Забронировать тур</h2>
+      <form action="#" method="post" style="max-width:400px; margin:auto; text-align:left;">
+        <label>Имя:</label>
+        <input name="name" required style="width:100%; padding:10px; margin:5px 0;" type="text" />
+        <label>Email:</label>
+        <input name="email" required style="width:100%; padding:10px; margin:5px 0;" type="email" />
+        <label>Количество участников:</label>
+        <input min="1" name="people" required style="width:100%; padding:10px; margin:5px 0;" type="number" value="1" />
+        <label>Дата тура:</label>
+        <input name="date" required style="width:100%; padding:10px; margin:5px 0;" type="date" />
+        <button style="width:100%; background:#007bff; color:white; border:none; padding:10px; cursor:pointer;" type="submit">
+          Отправить заявку
+        </button>
+      </form>
+    </section>
+
+    <!-- ===== КОНТАКТЫ ===== -->
+    <section id="contacts" class="contacts">
+      <div class="container">
+        <h2>Контакты</h2>
+        <form class="contact-form">
+          <div class="form-group">
+            <input type="text" name="name" placeholder="Имя" required />
+            <input type="email" name="email" placeholder="Email" required />
+          </div>
+          <textarea name="message" placeholder="Сообщение" required></textarea>
+          <button type="submit">Отправить</button>
+        </form>
+      </div>
+    </section>
+    <div class="modal success-modal">✅ Заявка успешно отправлена!</div>
+<div class="modal error-modal">❌ Ошибка при отправке!</div>
+    <!-- ===== АККОРДЕОН ===== -->
+<section class="accordion-section">
+  <h2 class="section-title">Почему выбирают нас</h2>
+
+  <div class="accordion-item">
+    <div class="accordion-header">Индивидуальный подход</div>
+    <div class="accordion-body">
+      Мы подбираем тур под ваши интересы и бюджет.
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <div class="accordion-header">Опытные гиды</div>
+    <div class="accordion-body">
+      С нами работают только профессионалы, отлично знающие маршруты.
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <div class="accordion-header">Безопасность и комфорт</div>
+    <div class="accordion-body">
+      Мы обеспечиваем поддержку 24/7 во время поездки.
+    </div>
+  </div>
+</section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+      <div class="container footer__container">
+        <p>© 2025 Air Asia</p>
+        <div class="footer__contacts">
+          <a href="https://wa.me/79999999999" target="_blank"><i class="fab fa-whatsapp"></i></a>
+          <a href="tel:+79999999999"><i class="fas fa-phone"></i></a>
+          <a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://vk.com/" target="_blank"><i class="fab fa-vk"></i></a>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- ===== JS ===== -->
+  <script>
+    const openVideoBtn = document.getElementById('openVideoBtn');
+    const videoModal = document.getElementById('videoModal');
+    const closeVideoBtn = document.getElementById('closeVideoBtn');
+    const tourVideoFrame = document.getElementById('tourVideoFrame');
+    const videoUrl = "https://www.youtube.com/embed/Gb0TQ7VeApY";
+
+    openVideoBtn.onclick = () => {
+      tourVideoFrame.src = videoUrl + "?autoplay=1";
+      videoModal.style.display = "block";
+    };
+    closeVideoBtn.onclick = () => {
+      videoModal.style.display = "none";
+      tourVideoFrame.src = "";
+    };
+    window.onclick = (e) => { if (e.target == videoModal) closeVideoBtn.onclick(); };
+  </script>
+  <script>
+// === ПОЛНОЭКРАННОЕ МЕНЮ ===
+const menuToggle = document.getElementById('menu-toggle');
+const menuClose = document.getElementById('menu-close');
+const menu = document.getElementById('fullscreen-menu');
+
+menuToggle.addEventListener('click', () => menu.classList.add('active'));
+menuClose.addEventListener('click', () => menu.classList.remove('active'));
+
+// === АККОРДЕОН ===
+const accItems = document.querySelectorAll('.accordion-item');
+accItems.forEach(item => {
+  const header = item.querySelector('.accordion-header');
+  header.addEventListener('click', () => {
+    item.classList.toggle('active');
+  });
+});
+
+// === ФОРМА ЗАКАЗА ===
+const bookingForm = document.querySelector('form');
+if (bookingForm) {
+  bookingForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    // Проверка заполненности
+    const inputs = bookingForm.querySelectorAll('input, textarea');
+    for (let i of inputs) {
+      if (!i.value.trim()) {
+        alert('Пожалуйста, заполните все поля!');
+        return;
+      }
+    }
+
+    // Эмуляция ответа сервера (успех или ошибка)
+    const success = Math.random() > 0.5;
+    const modal = document.querySelector(success ? '.success-modal' : '.error-modal');
+
+    modal.classList.add('active');
+    setTimeout(() => modal.classList.remove('active'), 3000);
+  });
+}
+</script>
+<script>
+// === FAQ АККОРДЕОН ===
+document.addEventListener("DOMContentLoaded", function () {
+  const faqItems = document.querySelectorAll(".faq-item");
+
+  faqItems.forEach(item => {
+    const header = item.querySelector(".faq-header");
+    const body = item.querySelector(".faq-body");
+
+    header.addEventListener("click", () => {
+      // закрываем остальные
+      faqItems.forEach(i => {
+        if (i !== item) i.classList.remove("active");
+      });
+      // открываем/закрываем выбранный
+      item.classList.toggle("active");
+    });
+  });
+});
+</script>
+
+</body>
+</html>
+<section id="contacts" class="contacts">
+  <div class="container">
+    <h2 class="contacts__title">Контакты авиалиний AirAsia</h2>
+
+    <div class="contacts__info">
+      <div class="contacts__item">
+        <h3>Наш офис</h3>
+        <p>г. Алматы, пр. Абая, 125</p>
+      </div>
+
+      <div class="contacts__item">
+        <h3>Телефон</h3>
+        <p><a href="tel:+77271234567">+7 (727) 123-45-67</a></p>
+      </div>
+
+      <div class="contacts__item">
+        <h3>Email</h3>
+        <p><a href="mailto:info@airasia.kz">info@airasia.kz</a></p>
+      </div>
+    </div>
+<!-- ===== ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ ===== -->
+<section class="faq-section" id="faq">
+  <h2 class="section-title">Часто задаваемые вопросы</h2>
+
+  <div class="faq-item">
+    <div class="faq-header">1. Как забронировать тур?</div>
+    <div class="faq-body">
+      Вы можете заполнить форму бронирования на сайте или позвонить нам по телефону, указанному в разделе «Контакты».
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-header">2. Нужно ли оформлять визу заранее?</div>
+    <div class="faq-body">
+      Зависит от направления. Наши менеджеры помогут с оформлением визы при необходимости.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-header">3. Можно ли вернуть деньги при отмене поездки?</div>
+    <div class="faq-body">
+      Да, возврат возможен в зависимости от условий туроператора и сроков отмены. Подробности уточняйте у менеджера.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-header">4. Что входит в стоимость тура?</div>
+    <div class="faq-body">
+      Обычно включено проживание, перелёт, трансфер и экскурсии. Подробный список указан в описании тура.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-header">5. Можно ли поехать одному?</div>
+    <div class="faq-body">
+      Конечно! Мы организуем туры как для групп, так и индивидуальные путешествия.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-header">6. Какие способы оплаты вы принимаете?</div>
+    <div class="faq-body">
+      Мы принимаем оплату банковской картой, переводом или наличными в офисе.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-header">7. Помогаете ли вы с выбором тура?</div>
+    <div class="faq-body">
+      Да, мы подберём маршрут с учётом ваших интересов, бюджета и дат отпуска.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-header">8. Есть ли скидки для групп?</div>
+    <div class="faq-body">
+      Да, для групп от 5 человек предусмотрены специальные условия и бонусы.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-header">9. Можно ли продлить тур на месте?</div>
+    <div class="faq-body">
+      В большинстве случаев да. Мы поможем продлить проживание и изменить дату обратного билета.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-header">10. Как связаться с гидом во время тура?</div>
+    <div class="faq-body">
+      Контакты вашего гида указаны в документах, которые вы получите перед поездкой. Также мы на связи 24/7.
+    </div>
+  </div>
+</section>
